@@ -1,0 +1,70 @@
+﻿@model List<DataAccessLayer.Models.User>
+
+@{
+    ViewData["Title"] = "Home Page";
+   Layout = "_Layout";
+
+}
+
+<div class="card">
+    <div class="card-body">
+        <div class="card-title">
+            <h2> User list</h2>
+
+        </div>
+        <table class="table table-bordered table-striped">
+            <thead class="bg-dark text-white">
+                <tr>
+                    <td>Firstname </td>
+                    <td>lastname </td>
+                    <td>phone </td>
+                    <td>email </td>
+                    <td> address</td>
+                    <td>state </td>
+                    <td>location </td>
+                    <td> referral</td>
+                    <td> Action</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DataAccessLayer.Models.User item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(itemDisplay => item.fName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemDisplay => item.lName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemDisplay => item.Phone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemDisplay => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemDisplay => item.Address)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemDisplay => item.State)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemDisplay => item.Location)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(itemDisplay => item.Referral)
+                        </td>
+                        <td>
+                            <a class="btn btn-primary">Edit</a> | <a class="btn btn-danger">Delete</a>
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

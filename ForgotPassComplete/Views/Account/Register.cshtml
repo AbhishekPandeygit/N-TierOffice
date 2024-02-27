@@ -1,0 +1,199 @@
+﻿@model RegisterVM
+@{
+    // Layout = "~/Views/Shared/_LayoutLR.cshtml";
+    Layout = "";
+
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/9514370813.js" crossorigin="anonymous"></script>
+    <link href="~/css/login.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <div class="row container">
+
+        <div class="col-6">
+            <h1 style="font-style: italic;">Vedic Life </h1>
+            <!-- <img src="images\logo-white.png" style="height: 60px; width: 100px;" alt="">  -->
+        </div>
+    </div>
+
+    <div class="container" style="height: 80px;">
+
+        <div class="row container">
+            <div class="col-6">
+
+                <h3 style="margin-top: 50px ; margin-bottom: 50px;">
+                    Welcome Back !</h1>
+
+                    <p>Login here . if you are already registered .</p>
+                    <a asp-action="Login" asp-controller="Account"> <h4>Login Now</h4>  </a>
+            </div>
+
+            <div class="col-6">
+
+                <h2>
+                    Sign Up Now</h1>
+                    <p>Please fill the details and create the account.</p>
+
+                    <form method="post" asp-controller="Account" asp-action="Register">
+                        <div class="row">
+
+                            <div class="input form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-user-tie fa-lg"></i>
+                                <input type="text" class="form-control" id="floatingName" asp-for="fName" placeholder="First Name">
+                                <label for="floatingName">First Name</label>
+                                <span asp-validation-for="fName" class="text-danger"></span>
+
+                            </div>
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-user-tie fa-lg"></i>
+                                <input type="text" class="form-control" id="LastName" asp-for="lName" placeholder="Last Name">
+                                <label for="floatingName">Last Name</label>
+                                <span asp-validation-for="lName" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-envelope fa-lg"></i>
+                                <input type="email" class="form-control" id="floatingEmail" asp-for="Email" placeholder="Email Id">
+                                <label for="floatingEmail">Email Id</label>
+                                <span asp-validation-for="Email" class="text-danger"></span>
+
+                            </div>
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-phone fa-lg"></i>
+                                <input type="text" class="form-control" id="floatingPhone" asp-for="phone" placeholder="Phone Number">
+                                <label for="floatingPhone">Phone Number</label>
+                                <span asp-validation-for="phone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-regular fa-calendar-days fa-lg"></i>
+                                <input type="date" class="form-control" id="floatingdob" asp-for="DOB" placeholder="DOB">
+                                <label for="floatingEmail">DOB</label>
+                                <span asp-validation-for="DOB" class="text-danger"></span>
+
+                            </div>
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-location-dot fa-lg"></i>
+                                <input type="text" class="form-control" id="floatingref" asp-for="Referral" placeholder="Select Referral">
+                                <label for="floatingPhone">Select Referral</label>
+                                <span asp-validation-for="Referral" class="text-danger"></span>
+                            </div>
+                        </div>
+                     @*    <div class="row">
+
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-user-tie fa-lg"></i>
+                                <select asp-for="State" name="" id="" class="form-control">
+                                    <option value="">select</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Bihar">Bihar</option>
+
+                                </select>
+                                <label asp-for="State" for="floatingEmail">select</label>
+                                <span asp-validation-for="State" class="text-danger"></span>
+
+
+                            </div>
+                        </div> *@
+                        <div class="row">
+                            <div class="form-floating mb-3">
+                                <i class="icon fa-solid fa-location-dot fa-lg"></i>
+                                <input type="text" class="form-control" id="floatingadd" asp-for="Address" placeholder="Address">
+                                <label for="floatingPhone">Address</label>
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-user-tie fa-lg"></i>
+                                <select asp-for="State" name="" id="state" class="form-control">
+                                    <option value="">select</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Bihar">Bihar</option>
+
+                                </select>
+                                <label asp-for="State" for="floatingEmail">select</label>
+                                <span asp-validation-for="State" class="text-danger"></span>
+
+
+                            </div>
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-location-dot fa-lg"></i>
+                                <input type="text" class="form-control" id="floatingloc" asp-for="Location" placeholder="Location Preference">
+                                <label for="floatingPhone">Location Preference</label>
+                                <span asp-validation-for="Location" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-lock fa-lg"></i>
+                                <input type="password" class="form-control" id="floatingPass" asp-for="Password" placeholder="Password">
+                                <label for="floatingEmail">Password</label>
+                                <span asp-validation-for="Password" class="text-danger"></span>
+
+                            </div>
+                            <div class="form-floating col-6 mb-3">
+                                <i class="icon fa-solid fa-lock fa-lg"></i>
+                                <input type="password" class="form-control" id="floatingcnfPass" asp-for="ConfirmPassword" placeholder="Confirm Password">
+                                <label asp-for="ConfirmPassword" for="floatingPhone">Confirm Password</label>
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+@*                            <button type="submit" class="btn btn-primary mb-5" style="border-radius: 35px ;">Submit</button>
+*@                            <button type="button" id="btnRegister" class="btn btn-primary mb-5" style="border-radius: 35px ;">Submit</button>
+
+
+                        </div>
+
+
+
+                    </form>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+
+
+<script src="~/js/site.js"></script>

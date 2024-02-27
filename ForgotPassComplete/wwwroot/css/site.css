@@ -1,0 +1,51 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+/*    margin-bottom: 60px;
+*/    background-image: url('https://img.freepik.com/premium-photo/monochrome-dark-blue-interior-sofa-potted-plant-floor-lamp-3d-visualization_727625-1110.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.login-logout-card .card-header{
+    padding : 0 0 -12px 0 ;
+}
+
+.login-logout-card ul.nav-tabs {
+    margin: 0 0 -12px 0;
+}
+
+.login-logout-card li.nav-item {
+    width : 50%;
+}
+
+.login-logout-card a.nav-link {
+    padding: 10px ;
+    font-size : 20px;
+    text-align: center;
+    color: rosybrown;
+}
+
+.login-logout-card .card-body {
+    padding: 10px 20px ;
+}
+/*
+body {
+    background-image: url('https://img.freepik.com/premium-photo/monochrome-dark-blue-interior-sofa-potted-plant-floor-lamp-3d-visualization_727625-1110.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}*/

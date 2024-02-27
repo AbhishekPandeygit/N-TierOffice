@@ -1,0 +1,63 @@
+﻿body {
+    background-image: url('https://img.freepik.com/premium-photo/monochrome-dark-blue-interior-sofa-potted-plant-floor-lamp-3d-visualization_727625-1110.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.form-floating {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    top: calc(50%);
+    left: 1.25rem;
+    /* left: 1.25 rem; */
+}
+
+.form-floating label, .form-floating .form-control {
+    left: .5rem;
+    padding-left: 3.5rem;
+}
+
+.icon-textarea {
+    position: absolute;
+    top: 1.8rem;
+    left: 1.25rem;
+}
+
+h1, h2, p, h4, h3, h6 {
+    color: azure;
+}
+
+p {
+    font-size: 13px;
+}
+
+
+/* ***doubt*** */
+.row input, .row select {
+    border-radius: 35px;
+}
+
+/* .input{
+    height: 10px;
+} */
+label {
+    margin-left: 30px;
+}
+
+/* @media (min-width: 1200px) {
+   .row .col-6{
+        max-width: 170px;
+    }
+} */
+
+.nav-des {
+    text-align: right;
+}
+
+form .row {
+    margin: auto;
+}
